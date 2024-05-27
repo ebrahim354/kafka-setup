@@ -8,7 +8,7 @@ async function consume(){
               "brokers" :["localhost:9092"]
          })
 
-        const consumer = kafka.consumer();
+        const consumer = kafka.consumer({groupId: "test"});
         await consumer.connect();
         console.log("Connected to Kafka");
         
