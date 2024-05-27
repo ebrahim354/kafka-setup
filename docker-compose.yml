@@ -27,9 +27,6 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-      depends_on:
-        - zookeeper
-
   schema-registry:
     image: confluentinc/cp-schema-registry:7.5.0
     container_name: schema-registry
